@@ -1,0 +1,6 @@
+- name: Var from other file
+  hosts: localhost
+  tasks:
+  - name: vars from files experiment
+    ansible.builtin.debug:
+     msg: "hi {{trainee}}, Be consistent in learning  {{course}} and remember '{{quote}}'"
