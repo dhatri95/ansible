@@ -30,4 +30,8 @@
     ansible.builtin.debug:
       msg: "Given number {{number}} is greater than or equal to 10"
     when: number | int >= 10
+
+  - name: Print default
+    ansible.builtin.debug:
+      msg: "Hi {{Name | default('Dhatri') }}"
   
