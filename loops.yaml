@@ -1,5 +1,6 @@
 - name: to update list of softwares on node
   hosts: web
+  become: yes
   tasks:
   - name: install softwares
     ansible.builtin.dnf:
