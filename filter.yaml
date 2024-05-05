@@ -18,10 +18,10 @@
       msg: "Unique list: {{NUMBERS | unique}}"
   
   - name: check given number is less than 10
-    var_prompt:
+    vars_prompt:
       name: number
       prompt: Enter a number
-      privacy: false
+      private: false
     ansible.builtin.debug:
       msg: "Given number {{number}} is less than 10"
     when: number | int < 0
