@@ -1,0 +1,11 @@
+- name: to update list of softwares on node
+  hosts: web
+  tasks:
+  - name: install softwares
+    ansible.builtin.dnf:
+      name: {{item.name}}
+      state: {{item.state}}
+    loop:
+      - {name: mysql, state: latest}
+      - {name: postfix, state: absent}
+      - {name: nginx, state: latest}
