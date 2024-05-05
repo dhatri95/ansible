@@ -1,9 +1,9 @@
 - name: experimenting with Variables
-  hosts: web
+  hosts: localhost
   vars:
-    course: DevOps
-    trainee: Dhatri
-    quote: practise makes man perfect
+    course: "DevOps"
+    trainee: "Dhatri"
+    quote: "practise makes man perfect"
   tasks:
     - name: message to user
       ansible.builtin.debug:
