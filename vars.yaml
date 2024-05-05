@@ -1,0 +1,10 @@
+- name: experimenting with Variables
+  hosts: web
+  vars:
+    course: DevOps
+    trainee: Dhatri
+    quote: practise makes man perfect
+  tasks:
+    - name: message to user
+      ansible.builtin.debug:
+      msg: "hi {{trainee}}, Be consistent in learning  {{course}} and remember {{quote}}"
