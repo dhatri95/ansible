@@ -1,0 +1,20 @@
+- name: filters
+  hosts: localhost
+  vars:
+    COURSE: DevOps
+  tasks:
+  - name: conversion to upper case
+    ansible.builtin.debug:
+      msg: "I am learning {{COURSE | upper}}"
+
+  - name: conversion to lower case
+    ansible.builtin.debug:
+      msg: "I am learning {{COURSE | lower}}"
+
+  - name: remove duplicates
+    vars:
+      NUMBERS: [1,3,5,2,3,4,6,5,6]
+    ansible.builtin.debug:
+      msg: "Unique list: {{NUMBERS | unique}}"
+
+  
