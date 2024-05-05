@@ -19,7 +19,7 @@
   
   - name: check given number is less than 10
     vars_prompt:
-      name: number
+    - name: number
       prompt: Enter a number
       private: false
     ansible.builtin.debug:
