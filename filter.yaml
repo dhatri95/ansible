@@ -2,6 +2,10 @@
   hosts: localhost
   vars:
     COURSE: DevOps
+  vars_prompt:
+  - name: number
+    prompt: Enter a number
+    private: false
   tasks:
   - name: conversion to upper case
     ansible.builtin.debug:
@@ -18,10 +22,6 @@
       msg: "Unique list: {{NUMBERS | unique}}"
   
   - name: check given number is less than 10
-    vars_prompt:
-    - name: number
-      prompt: Enter a number
-      private: false
     ansible.builtin.debug:
       msg: "Given number {{number}} is less than 10"
     when: number | int < 0
